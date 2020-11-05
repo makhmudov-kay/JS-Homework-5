@@ -14,19 +14,20 @@
             А также вывести в консоль весь объект
 
  */
-// Первый способ
+var data = {}
 for (let i = 1; i < 4; i++) {
-    let userName = prompt('Введите имя');
-    let userAge = prompt('Введите ваш возраст');
-    const objUser = {
-        "Ваше имя": userName,
-        "Ваш возраст": userAge
-    }
-    console.log("Пользователь " + i);
-    for (const key in objUser) {
-        console.log(key + ": " + objUser[key]);
+    b = prompt('Введите ваше имя');
+    c = prompt('Введите ваш возраст')
+    data[i] = {
+        name: b,
+        age: c
     }
 }
+
+for (const key in data) {
+    console.log(`Пользователь ${key}; Ваше имя ${data[key]["name"]}; Ваш возраст ${data[key]["age"]}`);
+}
+console.log(data);
 
 /* Задание: (Корзина товаров)
            Вам дается ссылка на js файл ее вы подключете перед вашим script.js:
