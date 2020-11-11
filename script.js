@@ -14,7 +14,7 @@
             А также вывести в консоль весь объект
 
  */
-var data = {}
+/* var data = {}
 for (let i = 1; i < 4; i++) {
     b = prompt('Введите ваше имя');
     c = prompt('Введите ваш возраст')
@@ -27,7 +27,7 @@ for (let i = 1; i < 4; i++) {
 for (const key in data) {
     console.log(`Пользователь ${key}; Ваше имя ${data[key]["name"]}; Ваш возраст ${data[key]["age"]}`);
 }
-console.log(data);
+console.log(data); */
 
 /* Задание: (Корзина товаров)
            Вам дается ссылка на js файл ее вы подключете перед вашим script.js:
@@ -60,8 +60,9 @@ var totalPrice = 0;
 
 for (const key in menu) {
         text += `${key} ${menu[key]["info"]}, `
-        totalPrice += menu[key]["price"] + 9000;
+        totalPrice += menu[key]["price"];
 } 
+totalPrice += 9000;
 console.log(`Вы заказали: ${text}| Общая стоимость заказа ${totalPrice} сум с доставкой (9000)`);
 
 
